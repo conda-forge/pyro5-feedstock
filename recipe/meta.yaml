@@ -1,4 +1,4 @@
-{% set version = "5.8" %}
+{% set version = "5.9" %}
 
 package:
   name: pyro5
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/P/Pyro5/Pyro5-{{ version }}.tar.gz
-  sha256: 8ad9cd203c96142542898e66316e068d066d49cb75bda497deea145f7d0f76df
+  sha256: d6d07badc4dd3f44643e9895a7d141b72a58e2204eb1fdf12673c808bbed3eba
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pyro5-ns = Pyro5.nameserver:main
     - pyro5-nsc = Pyro5.nsc:main
@@ -26,7 +26,7 @@ requirements:
     - python >=3.0
     - setuptools
     - serpent >=1.27
-    
+
   run:
     - python >=3.0
     - serpent >=1.27
@@ -48,7 +48,7 @@ about:
   home: https://pyro5.readthedocs.io
   license: MIT
   license_file: LICENSE
-  summary: 'Distributed object middleware for Python (RPC)'
+  summary: Distributed object middleware for Python (RPC)
 
 extra:
   recipe-maintainers:

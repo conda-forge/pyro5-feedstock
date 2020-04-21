@@ -1,4 +1,4 @@
-{% set version = "5.9.1" %}
+{% set version = "5.9.2" %}
 
 package:
   name: pyro5
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/P/Pyro5/Pyro5-{{ version }}.tar.gz
-  sha256: 1191bbe809127d3024eb11e32185471cc3a3a48b75bc57bb170b1e2b31e7b076
+  sha256: 4499fd5637c91e3a30bc8fe6c35606e61dbe64ee2ad70ca187e3321c5724c182
 
 build:
   number: 0

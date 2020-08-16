@@ -5,7 +5,7 @@ Home: https://pyro5.readthedocs.io
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Distributed object middleware for Python (RPC)
 

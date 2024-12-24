@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/P/Pyro5/Pyro5-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/P/Pyro5/Pyro5-{{ version }}.tar.gz
   sha256: 82c3dfc9860b49f897b28ff24fe6716c841672c600af8fe40d0e3a7fac9a3f5e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -23,15 +23,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.0
+    - python {{ python_min }}
     - setuptools
     - serpent >=1.27
 
   run:
-    - python >=3.0
+    - python >={{ python_min }}
     - serpent >=1.27
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - Pyro5
     - Pyro5.compatibility

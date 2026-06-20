@@ -2,7 +2,7 @@
 
 package:
   name: pyro5
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://pypi.org/packages/source/P/Pyro5/pyro5-{{ version }}.tar.gz
